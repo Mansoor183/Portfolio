@@ -30,6 +30,15 @@ const Projects = () => {
             project_image_alt: 'Todo App Image',
             project_live_demo: 'https://todo-list-app-new.vercel.app/',
             project_github: 'https://github.com/Mansoor183/Todo-App-WithBackend',
+        },
+        {
+            project_name: 'Weather App',
+            project_tech: 'React, Tailwind CSS, OpenWeatherMap API',
+            project_description: 'A weather forecasting app that provides real-time weather data for any location worldwide.',
+            project_image: 'project_images/weather_app.png',
+            project_image_alt: 'Weather App Image',
+            project_live_demo: 'https://weather-app-kohl-eight-78.vercel.app/',
+            project_github: 'https://github.com/Mansoor183/Weather-App'
         }
     ];
 
