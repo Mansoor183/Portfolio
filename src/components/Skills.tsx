@@ -10,6 +10,7 @@ const Skills = () => {
 
     const backend_skills: Skill[] = [
         { name: "Java", img_name: "skills_svg/Java-Dark.svg", alt: "Java" },
+        { name: "Hibernate", img_name: "skills_svg/hibernate-dark.svg", alt: "Hibernate" },
         { name: "C++", img_name: "skills_svg/CPP.svg", alt: "C++" },
         { name: "C", img_name: "skills_svg/C.svg", alt: "C" },
         { name: "Spring", img_name: "skills_svg/Spring-Dark.svg", alt: "Spring" },
@@ -33,8 +34,7 @@ const Skills = () => {
         { name: "GitHub", img_name: "skills_svg/Github-Dark.svg", alt: "GitHub" },
         { name: "Firebase", img_name: "skills_svg/Firebase-Dark.svg", alt: "Firebase" },
         { name: "Postman", img_name: "skills_svg/Postman.svg", alt: "Postman" },
-        { name: "VS Code", img_name: "skills_svg/VSCode-Dark.svg", alt: "VS Code" },
-        { name: "Visual Studio", img_name: "skills_svg/VisualStudio-Dark.svg", alt: "Visual Studio" }
+        { name: "Redis", img_name: "skills_svg/redis-dark.svg", alt: "Redis" }
     ];
 
     const renderSkills = (skills: Skill[]) => {

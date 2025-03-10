@@ -14,9 +14,18 @@ const Projects = () => {
 
     const projectsData: ProjectsInterface[] = [
         {
+            project_name: 'URL Shortener',
+            project_tech: 'Spring Boot, Hibernate, Java, MySQL, Redis',
+            project_description: 'A URL shortener that converts long links into concise, shareable URLs with seamless redirection.',
+            project_image: 'project_images/url_shortener.webp',
+            project_image_alt: 'URL Shortener Image',
+            project_live_demo: '',
+            project_github: 'https://github.com/Mansoor183/URL-Shortener',
+        },
+        {
             project_name: 'Netflix Clone',
-            project_tech: 'React, React Router, Tailwind CSS, Firebase',
-            project_description: 'A responsive movie browsing app with secure logins and personalized saved movie collections.',
+            project_tech: 'React, React Router, Tailwind CSS, Firebase, TypeScript',
+            project_description: 'A responsive movie app with secure logins and personalized saved movie collections.',
             project_image: 'project_images/netflix_clone.png',
             project_image_alt: 'Netflix Clone Image',
             project_live_demo: 'https://netflix-clone-sage-nine.vercel.app/',
@@ -24,7 +33,7 @@ const Projects = () => {
         },
         {
             project_name: 'To-Do List App',
-            project_tech: 'React, Tailwind CSS, Spring Boot, MySQL, Spring Data JPA',
+            project_tech: 'React, Tailwind CSS, Spring Boot, MySQL, Spring Data JPA, JavaScript',
             project_description: 'A task management application with real-time task synchronization and an intuitive interface.',
             project_image: 'project_images/todo_app.png',
             project_image_alt: 'Todo App Image',
@@ -68,12 +77,18 @@ const Projects = () => {
                                     </div>
 
                                     <div className='flex gap-6'>
+                                    {
+                                        data.project_github &&
                                         <a href={data.project_github} target='_blank' className='cursor-pointer rounded bg-gray-200 py-1.5 px-5 text-gray-700 border border-gray-300 transition duration-300 hover:scale-110 hover:shadow-[0_0_10px_4px_rgb(200,200,200)]'>
                                             GitHub
                                         </a>
+                                    }
+                                    {
+                                        data.project_live_demo &&
                                         <a href={data.project_live_demo} target='_blank' className='cursor-pointer rounded bg-gray-200 py-1.5 px-5 text-gray-700 border border-gray-300 transition duration-300 hover:scale-110 hover:shadow-[0_0_10px_4px_rgb(200,200,200)]'>
                                             Live Demo
                                         </a>
+                                    }
                                     </div>
                                 </div>
 
