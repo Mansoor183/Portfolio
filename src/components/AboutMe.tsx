@@ -42,25 +42,27 @@ const AboutMe = () => {
             link: "https://www.geeksforgeeks.org/user/mansoorme2000",
             image: "skills_svg/Geeksforgeeks.svg",
             alt: "GeeksforGeeks",
-        },
+        }
     ];
 
     const renderLinks = (links: iLinkData[]) => {
         return links.map((link, index) => (
-            <a
-                key={index}
-                href={link.link}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <img
-                    src={link.image}
-                    alt={link.alt}
-                    className="h-10 w-10 object-contain transition duration-300 hover:scale-110 hover:shadow-[0_0_15px_10px_rgb(200,200,200)] rounded-lg"
-                />
-            </a>
+            <div key={index} className="relative group inline-block">
+                <a href={link.link} target="_blank" rel="noopener noreferrer">
+                    <img
+                        src={link.image}
+                        alt={link.alt}
+                        className="h-10 w-10 object-contain transition duration-300 hover:scale-110 hover:shadow-[0_0_15px_10px_rgb(200,200,200)] rounded-lg"
+                    />
+                </a>
+                {/* Tooltip */}
+                <span className="absolute bottom-12 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none md:left-auto md:right-8 md:bottom-auto md:top-1/2 md:-translate-y-1/2">
+                    {link.alt}
+                </span>
+            </div>
         ));
     };
+
 
     return (
         <section id="about" className="space-y-9 p-6">
@@ -104,7 +106,7 @@ const AboutMe = () => {
                 </div>
 
                 {/* Right Side: Images Portion */}
-                <div className="flex flex-row md:flex-col gap-4 md:gap-6 justify-center md:justify-start">
+                <div className="flex flex-row md:flex-col gap-3 md:gap-6 justify-center md:justify-start">
                     {renderLinks(linkData)}
                 </div>
             </div>
