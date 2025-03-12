@@ -23,12 +23,12 @@ const Projects = () => {
             project_github: 'https://github.com/Mansoor183/URL-Shortener',
         },
         {
-            project_name: 'Netflix Clone',
+            project_name: 'Movie App',
             project_tech: 'React, React Router, Tailwind CSS, Firebase, TypeScript',
             project_description: 'A responsive movie app with secure logins and personalized saved movie collections.',
-            project_image: 'project_images/netflix_clone.png',
-            project_image_alt: 'Netflix Clone Image',
-            project_live_demo: 'https://netflix-clone-sage-nine.vercel.app/',
+            project_image: 'project_images/movie_app.png',
+            project_image_alt: 'Movie App Image',
+            project_live_demo: 'https://netflix-clone-smoky-alpha-58.vercel.app/',
             project_github: 'https://github.com/Mansoor183/Netflix-Clone',
         },
         {
