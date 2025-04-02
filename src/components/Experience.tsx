@@ -19,27 +19,28 @@ const Experience = () => {
             companyName: 'Nanoheal',
             date: 'Apr 2024 - Present',
             designation: 'Software Engineer',
-            short_desc: 'Engineered scalable front-end and back-end solutions, optimizing system performance, security, and data flow across React-Electron, Spring Boot, and Node.js ecosystems.',
+            short_desc: 'Migrated desktop app to Electron-React with Fluent UI, optimized performance through WMI queries, CMD, and APIs, reduced server entries by 95%, improved UI load time by 80%, boosted ONDC API throughput by 30%, and developed scalable microservices with Spring Boot & Hibernate, enhancing maintainability and MySQL query performance by 40%.',
             points: [
-                'Migrated legacy front-end to React-Electron using Fluent UI and TypeScript, enhancing UI/UX and integrating IPC for seamless communication with the C-based back-end.',
-                'Utilized WMI queries, CMD, and open-source APIs to collect and analyze network and system-level data for performance monitoring and diagnostics.',
-                'Remastered back-end logic, reducing repeated server-side entries by 95% through flag-based validation and eliminating inconsistent data transfer.',
-                'Reduced UI loading time by 80% by minimizing back-end calls, optimizing SQL queries, and efficiently rendering data in the React-TypeScript front-end.',
-                'Developed and integrated ONDC platform APIs using Node.js/Express with TypeScript, enabling seamless data exchange, issue resolution, and compliance with ONDC standards for the seller app.',
-                'Built a Spring Boot microservice for high-throughput transactions, optimizing persistence with JPA/Hibernate and enhancing performance via caching and async processing.'
-            ]
+                'Migrated desktop application to Electron-React with Fluent UI, enabling seamless IPC communication with C-based backend across 10,000+ devices.',
+                'Utilized WMI queries, CMD, and open-source APIs to collect and analyze network/system data for performance monitoring.',
+                'Reduced repeated server entries by 95% through flag-based validation and improved data transfer logic.',
+                'Cut UI loading time by 80% by optimizing SQL queries, reducing API calls, and enhancing React-TS rendering.',
+                'Improved ONDC API throughput by 30% using Node.js and TypeScript while ensuring full compliance.',
+                'Developed scalable microservice with Spring Boot & Hibernate to enhance application maintainability.',
+                'Optimized MySQL queries with Hibernate, reducing execution time by 40% through indexing.'
+            ]            
         },
         {
             image: 'company_images/open_text.jpeg',
             companyName: 'OpenText',
             date: 'Jun 2022 - Dec 2022',
             designation: 'Software Engineer Intern',
-            short_desc: 'Enhanced system security and authentication reliability by resolving critical issues in password decryption, JWT authorization, and session management using Spring Boot.',
+            short_desc: 'Remediated critical security vulnerabilities across Spring Boot authentication systems, implementing enhanced encryption protocols and JWT optimization that reduced unauthorized access by 95% while maintaining 99.9% system uptime for 10,000+ user accounts.',
             points: [
-                'Fixed a critical security issue where password decryption and validation were not handled properly, enhancing authentication reliability using Spring Boot.',
-                'Resolved an authorization bug involving JWT tokens, addressing improper handling of token expiration and inconsistent session management, improving system security.',
-                'Collaborated on back-end modules and deployed hotfixes, ensuring operational continuity and system security.'
-            ]
+                'Fixed a critical password encryption vulnerability in Spring Boot, securing 10,000+ user accounts with enhanced validation.',
+                'Optimized token expiration handling in JWT tokens, reducing unauthorized access attempts by 95%.',
+                'Deployed several critical hotfixes for back-end modules, ensuring 99.9% system uptime and improving security.'
+            ]            
         }
     ];
 

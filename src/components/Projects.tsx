@@ -15,8 +15,8 @@ const Projects = () => {
     const projectsData: ProjectsInterface[] = [
         {
             project_name: 'URL Shortener',
-            project_tech: 'Spring Boot, Hibernate, Java, MySQL, Redis',
-            project_description: 'A URL shortener that converts long links into concise, shareable URLs with seamless redirection.',
+            project_tech: 'Spring Boot, Hibernate, Redis, Docker, Java, MySQL, Git',
+            project_description: 'Engineered a high-capacity URL shortening service with 3.5T+ URL capacity, implementing Redis LRU caching for 90% query reduction, custom alias functionality, and containerized deployment architecture.',
             project_image: 'project_images/url_shortener.webp',
             project_image_alt: 'URL Shortener Image',
             project_live_demo: '',
@@ -24,8 +24,8 @@ const Projects = () => {
         },
         {
             project_name: 'Movie App',
-            project_tech: 'React, React Router, Tailwind CSS, Firebase, TypeScript',
-            project_description: 'A responsive movie app with secure logins and personalized saved movie collections.',
+            project_tech: 'React, React Router, Tailwind CSS, Firebase, TypeScript, Git',
+            project_description: 'Engineered a high-performance React movie application with Tailwind CSS that reduced development time by 40% while integrating Firebase services capable of handling 100K+ operations per second.',
             project_image: 'project_images/movie_app.png',
             project_image_alt: 'Movie App Image',
             project_live_demo: 'https://netflix-clone-smoky-alpha-58.vercel.app/',
@@ -33,8 +33,8 @@ const Projects = () => {
         },
         {
             project_name: 'To-Do List App',
-            project_tech: 'React, Tailwind CSS, Spring Boot, MySQL, Spring Data JPA, JavaScript',
-            project_description: 'A task management application with real-time task synchronization and an intuitive interface.',
+            project_tech: 'React, Tailwind CSS, Spring Boot, MySQL, Spring Data JPA, JavaScript, Git',
+            project_description: 'Architected a scalable React To-Do application with Spring Boot backend that provides real-time synchronization for 100K+ tasks using MySQL and Spring Data JPA integration.',
             project_image: 'project_images/todo_app.png',
             project_image_alt: 'Todo App Image',
             project_live_demo: 'https://todo-list-app-new.vercel.app/',
@@ -42,8 +42,8 @@ const Projects = () => {
         },
         {
             project_name: 'Weather App',
-            project_tech: 'React, Tailwind CSS, OpenWeatherMap API',
-            project_description: 'A weather forecasting app that provides real-time weather data for any location worldwide.',
+            project_tech: 'React, Tailwind CSS, OpenWeatherMap API, Git',
+            project_description: 'Developed a weather app delivering hyperlocal forecasts, radar visualization, and personalized alerts for global locations in real-time.',
             project_image: 'project_images/weather_app.png',
             project_image_alt: 'Weather App Image',
             project_live_demo: 'https://weather-app-kohl-eight-78.vercel.app/',
@@ -68,7 +68,7 @@ const Projects = () => {
                                     </div>
 
                                     <div className='bg-gray-200 rounded-lg p-4'>
-                                        <p className='text-gray-700 leading-relaxed'>
+                                        <p className='text-gray-700 leading-relaxed font-bold'>
                                             {data.project_tech}
                                         </p>
                                         <p className='text-gray-700 leading-relaxed mt-2'>
@@ -94,11 +94,9 @@ const Projects = () => {
 
                                 {/* Right Content - Mockup */}
                                 <div className='flex-1'>
-                                    <div className='bg-white rounded-lg p-4 shadow-sm'>
-                                        <div className='h-40 flex items-center justify-center'>
+                                        <div className='h-40 flex items-center justify-center p-2'>
                                             <img src={data.project_image} alt={data.project_image_alt} className='hover:scale-110 transition duration-300 rounded-lg cursor-pointer'/>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

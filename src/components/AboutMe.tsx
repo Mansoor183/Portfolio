@@ -14,7 +14,7 @@ const AboutMe = () => {
 
     const data: iData = {
         name: "Mansoor Elahi",
-        about: "Proficient in React.js, Spring Boot, and MySQL, with expertise in JWT-based authentication, RESTful APIs, and database optimization using Hibernate. Solved over 300 problems on LeetCode, showcasing strong analytical skills. Migrated legacy systems, improved app performance, and reduced load times. Delivered secure, high-performance applications with innovative solutions like shared memory mechanisms and precise server logging. Passionate about continuous learning and delivering impactful solutions.",
+        about: "Proficient in React.js, Spring Boot, Node.js and MySQL, with expertise in JWT-based authentication, RESTful APIs, and database optimization using Hibernate. Solved over 300 problems on LeetCode, showcasing strong analytical skills. Migrated legacy systems, improved app performance, and reduced load times. Delivered secure, high-performance applications with innovative solutions like shared memory mechanisms and precise server logging. Passionate about continuous learning and delivering impactful solutions.",
     };
 
     const linkData: iLinkData[] = [

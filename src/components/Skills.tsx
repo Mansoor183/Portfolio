@@ -13,7 +13,7 @@ const Skills = () => {
         { name: "Hibernate", img_name: "skills_svg/hibernate-dark.svg", alt: "Hibernate" },
         { name: "C++", img_name: "skills_svg/CPP.svg", alt: "C++" },
         { name: "C", img_name: "skills_svg/C.svg", alt: "C" },
-        { name: "Spring", img_name: "skills_svg/Spring-Dark.svg", alt: "Spring" },
+        { name: "Spring Boot", img_name: "skills_svg/Spring-Dark.svg", alt: "Spring Boot" },
         { name: "Node.js", img_name: "skills_svg/NodeJS-Dark.svg", alt: "Node.js" },
         { name: "MySQL", img_name: "skills_svg/MySQL-Dark.svg", alt: "MySQL" },
         { name: "SQLite", img_name: "skills_svg/SQLite.svg", alt: "SQLite" }
@@ -34,7 +34,8 @@ const Skills = () => {
         { name: "GitHub", img_name: "skills_svg/Github-Dark.svg", alt: "GitHub" },
         { name: "Firebase", img_name: "skills_svg/Firebase-Dark.svg", alt: "Firebase" },
         { name: "Postman", img_name: "skills_svg/Postman.svg", alt: "Postman" },
-        { name: "Redis", img_name: "skills_svg/redis-dark.svg", alt: "Redis" }
+        { name: "Redis", img_name: "skills_svg/redis-dark.svg", alt: "Redis" },
+        { name: "Docker", img_name: "skills_svg/docker.svg", alt: "Docker" }
     ];
 
     const renderSkills = (skills: Skill[]) => {
