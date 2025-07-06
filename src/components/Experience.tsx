@@ -13,27 +13,31 @@ const Experience = () => {
         points: string[]; // Array of points
     }
 
+
+//  • 
+//  • 
+//  • 
+
     const experienceData: iExperience[] = [
         {
             image: 'company_images/nanoheal.jpg',
             companyName: 'Nanoheal',
             date: 'Apr 2024 - Present',
             designation: 'Software Engineer',
-            short_desc: 'Migrated desktop app to Electron-React with Fluent UI, optimized performance through WMI queries, CMD, and APIs, reduced server entries by 95%, improved UI load time by 80%, boosted ONDC API throughput by 30%, and developed scalable microservices with Spring Boot & Hibernate, enhancing maintainability and MySQL query performance by 40%.',
+            short_desc: 'Full-stack developer with experience building scalable backend systems and performant desktop apps. Delivered high-traffic modules using Spring Boot, Node.js, and MongoDB, optimized Electron-React UIs for 40K+ devices, secured APIs with public key pinning, and implemented CI/CD with GitHub Actions. Proven impact includes 80% faster UI loads, 40% faster APIs, and elimination of major DB inefficiencies.',
             points: [
-                'Migrated desktop application to Electron-React with Fluent UI, enabling seamless IPC communication with C-based backend across 10,000+ devices.',
-                'Utilized WMI queries, CMD, and open-source APIs to collect and analyze network/system data for performance monitoring.',
-                'Reduced repeated server entries by 95% through flag-based validation and improved data transfer logic.',
-                'Cut UI loading time by 80% by optimizing SQL queries, reducing API calls, and enhancing React-TS rendering.',
-                'Improved ONDC API throughput by 30% using Node.js and TypeScript while ensuring full compliance.',
-                'Developed scalable microservice with Spring Boot & Hibernate to enhance application maintainability.',
-                'Optimized MySQL queries with Hibernate, reducing execution time by 40% through indexing.'
+                'Built License & Activation module with Spring Boot and MySQL on AWS EC2, serving 50K+ license requests/month.',
+                'Rebuilt desktop client for 40K+ devices using Electron-React and Fluent UI, reducing UI load time by 80% and improving backend interaction by 30%.',
+                'Fixed data duplication bug by refactoring backend logic and DB schema, eliminating 20x redundant writes.',
+                'Implemented public key pinning with automated rotation to secure communications and prevent MITM attacks.',
+                'Developed IGM module for ONDC’s B2B platform using Node.js, TypeScript, and MongoDB with Redis caching, improving API response time by 40%.',
+                'Set up CI/CD pipelines using GitHub Actions for automated build, test, and deployment workflows.',
             ]            
         },
         {
             image: 'company_images/open_text.jpeg',
             companyName: 'OpenText',
-            date: 'Jun 2022 - Dec 2022',
+            date: 'Jun 2023 - Dec 2023',
             designation: 'Software Engineer Intern',
             short_desc: 'Remediated critical security vulnerabilities across Spring Boot authentication systems, implementing enhanced encryption protocols and JWT optimization that reduced unauthorized access by 95% while maintaining 99.9% system uptime for 10,000+ user accounts.',
             points: [
