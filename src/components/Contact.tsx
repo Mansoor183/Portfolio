@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Header from './Header';
+import { Download, Mail, MapPin, Phone } from 'lucide-react';
 
 const Contact = () => {
     const [isMessageSent, setIsMessageSent] = useState(false);
@@ -39,100 +39,95 @@ const Contact = () => {
     };
 
     return (
-        <section id='contact' className='px-6'>
-            <Header header='Contact Me' />
-            <div className=' text-center pb-9'>
-                Email: mansoorme2000@gmail.com
-            </div>
-            <form onSubmit={onSubmit} className='bg-gray-100 rounded-lg shadow-md p-6 max-w-2xl mx-auto'>
-                {/* Name Field */}
-                <div className='mb-6'>
-                    <label htmlFor='name' className='block text-gray-700 font-medium mb-2'>
-                        Name
-                    </label>
-                    <input
-                        type='text'
-                        id='name'
-                        name='name'
-                        className='w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent'
-                        placeholder='Enter your name'
-                        required
-                    />
-                </div>
-
-                {/* Email Field */}
-                <div className='mb-6'>
-                    <label htmlFor='email' className='block text-gray-700 font-medium mb-2'>
-                        Email
-                    </label>
-                    <input
-                        type='email'
-                        id='email'
-                        name='email'
-                        className='w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent'
-                        placeholder='Enter your email'
-                        required
-                    />
-                </div>
-
-                {/* Message Field */}
-                <div className='mb-6'>
-                    <label htmlFor='message' className='block text-gray-700 font-medium mb-2'>
-                        Message
-                    </label>
-                    <textarea
-                        id='message'
-                        name='message'
-                        className='w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent'
-                        rows={5}
-                        placeholder='Enter your message'
-                        required
-                    ></textarea>
-                </div>
-
-                {/* Submit Button */}
-                <div className='text-center'>
-                    <button
-                        type='submit'
-                        disabled={isLoading} // Disable the button when loading
-                        className='rounded bg-gray-200 py-1.5 px-5 text-gray-700 border border-gray-300 transition duration-300 hover:scale-110 hover:shadow-[0_0_10px_4px_rgb(200,200,200)]'
-                    >
-                        {isLoading ? (
-                            <div className='flex items-center justify-center'>
-                                <svg
-                                    className='animate-spin h-5 w-5 text-gray-700'
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    fill='none'
-                                    viewBox='0 0 24 24'
-                                >
-                                    <circle
-                                        className='opacity-25'
-                                        cx='12'
-                                        cy='12'
-                                        r='10'
-                                        stroke='currentColor'
-                                        strokeWidth='4'
-                                    ></circle>
-                                    <path
-                                        className='opacity-75'
-                                        fill='currentColor'
-                                        d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
-                                    ></path>
-                                </svg>
+        <section id="contact" className="py-20 px-6 bg-black/20">
+            <div className="container mx-auto max-w-4xl">
+                <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Get In Touch
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="space-y-8">
+                        <div>
+                            <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+                            <p className="text-gray-400 mb-8 leading-relaxed">
+                                I'm always interested in new opportunities and exciting projects.
+                                Whether you want to discuss a potential collaboration or just say hello,
+                                I'd love to hear from you!
+                            </p>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="flex items-center">
+                                <Mail className="w-5 h-5 text-purple-400 mr-3" />
+                                <span>mansoorme2000@email.com</span>
                             </div>
-                        ) : (
-                            'Submit Form'
-                        )}
-                    </button>
-                </div>
-
-                {/* Success Message */}
-                {isMessageSent && (
-                    <div className='mt-4 text-center text-green-600'>
-                        Message was sent to my e-mail. Thank you.
+                            <div className="flex items-center">
+                                <Phone className="w-5 h-5 text-purple-400 mr-3" />
+                                <span>+91 8415054874</span>
+                            </div>
+                            <div className="flex items-center">
+                                <MapPin className="w-5 h-5 text-purple-400 mr-3" />
+                                <span>Bengaluru, Karnataka, India</span>
+                            </div>
+                        </div>
+                        <div className="flex space-x-6">
+                            <a href="https://github.com/Mansoor183" target='_blank' className="rounded-lg hover:scale-110 transition ease-in-out duration-300">
+                                <img src='/skills_svg/github-light.svg' className="w-11 h-11" />
+                            </a>
+                            <a href="https://linkedin.com/in/mansoor-elahi" target='_blank' className="rounded-lg hover:scale-110 transition ease-in-out duration-300">
+                                <img src='/skills_svg/LinkedIn.svg' className="w-11 h-11" />
+                            </a>
+                            <a href="https://leetcode.com/Mansoor_Elahi" target='_blank' className="rounded-lg hover:scale-110 transition ease-in-out duration-300">
+                                <img src='/skills_svg/leetcode-light.svg' className="w-11 h-11" />
+                            </a>
+                        </div>
                     </div>
-                )}
-            </form>
+                    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                        <div className="space-y-6">
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Name</label>
+                                <input
+                                    type="text"
+                                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-400 transition-colors"
+                                    placeholder="Your Name"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Email</label>
+                                <input
+                                    type="email"
+                                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-400 transition-colors"
+                                    placeholder="your@email.com"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Message</label>
+                                <textarea
+                                    rows={4}
+                                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-400 transition-colors resize-none"
+                                    placeholder="Your message..."
+                                    required
+                                />
+                            </div>
+                            <button
+                                onClick={onSubmit}
+                                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                            >
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="text-center mt-16">
+                    <a
+                        href="#"
+                        className="inline-flex items-center bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                    >
+                        <Download className="w-5 h-5 mr-2" />
+                        Download Resume
+                    </a>
+                </div>
+            </div>
         </section>
     );
 };

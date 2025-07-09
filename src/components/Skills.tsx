@@ -1,97 +1,75 @@
-import Header from "./Header";
 
 const Skills = () => {
 
-    interface Skill {
-        name: string;
-        img_name: string;
-        alt: string;
+    interface SkillCategories {
+        [category: string]: {
+            name: string;
+            icon: string;
+        }[];
     }
 
-    const backend_skills: Skill[] = [
-        { name: "Java", img_name: "skills_svg/Java-Dark.svg", alt: "Java" },
-        { name: "Hibernate", img_name: "skills_svg/hibernate-dark.svg", alt: "Hibernate" },
-        { name: "C++", img_name: "skills_svg/CPP.svg", alt: "C++" },
-        { name: "C", img_name: "skills_svg/C.svg", alt: "C" },
-        { name: "Spring Boot", img_name: "skills_svg/Spring-Dark.svg", alt: "Spring Boot" },
-        { name: "Node.js", img_name: "skills_svg/NodeJS-Dark.svg", alt: "Node.js" },
-        { name: "MySQL", img_name: "skills_svg/MySQL-Dark.svg", alt: "MySQL" },
-        { name: "SQLite", img_name: "skills_svg/SQLite.svg", alt: "SQLite" }
-    ];
-
-    const front_end: Skill[] = [
-        { name: "JavaScript", img_name: "skills_svg/JavaScript.svg", alt: "JavaScript" },
-        { name: "TypeScript", img_name: "skills_svg/TypeScript.svg", alt: "TypeScript" },
-        { name: "React", img_name: "skills_svg/React-Dark.svg", alt: "React" },
-        { name: "Tailwind", img_name: "skills_svg/TailwindCSS-Dark.svg", alt: "Tailwind" },
-        { name: "HTML", img_name: "skills_svg/HTML.svg", alt: "HTML" },
-        { name: "CSS", img_name: "skills_svg/CSS.svg", alt: "CSS" }
-    ];
-
-    const other_skills: Skill[] = [
-        { name: "Git", img_name: "skills_svg/Git.svg", alt: "Git" },
-        { name: "GitLab", img_name: "skills_svg/GitLab-Dark.svg", alt: "GitLab" },
-        { name: "GitHub", img_name: "skills_svg/Github-Dark.svg", alt: "GitHub" },
-        { name: "Firebase", img_name: "skills_svg/Firebase-Dark.svg", alt: "Firebase" },
-        { name: "Postman", img_name: "skills_svg/Postman.svg", alt: "Postman" },
-        { name: "Redis", img_name: "skills_svg/redis-dark.svg", alt: "Redis" },
-        { name: "Docker", img_name: "skills_svg/docker.svg", alt: "Docker" }
-    ];
-
-    const renderSkills = (skills: Skill[]) => {
-        return skills.map((skill, index) => (
-            <div key={index} className='flex flex-col items-center'>
-                <img src={skill.img_name} alt={skill.alt} className='rounded-lg h-12 w-12' />
-                <span className='mt-2 text-gray-700'>{skill.name}</span>
-            </div>
-        ));
+    const skillCategories: SkillCategories = {
+        'Backend': [
+            { name: 'Java', icon: 'skills_svg/Java-Dark.svg' },
+            { name: 'Hibernate', icon: 'skills_svg/hibernate-dark.svg' },
+            { name: 'Spring Boot', icon: 'skills_svg/Spring-Dark.svg' },
+            { name: 'C++', icon: 'skills_svg/CPP.svg' },
+            { name: 'C', icon: 'skills_svg/C.svg' },
+            { name: 'Node.js', icon: 'skills_svg/NodeJS-Dark.svg' },
+            { name: 'RESTful APIs', icon: 'skills_svg/rest-api.svg' },
+            { name: 'CI/CD', icon: 'skills_svg/ci-cd.svg' },
+        ],
+        'Frontend': [
+            { name: 'React.js', icon: 'skills_svg/React-Dark.svg' },
+            { name: 'JavaScript', icon: 'skills_svg/TypeScript.svg' },
+            { name: 'TypeScript', icon: 'skills_svg/JavaScript.svg' },
+            { name: 'Tailwind CSS', icon: 'skills_svg/TailwindCSS-Dark.svg' },
+            { name: 'HTML5', icon: 'skills_svg/HTML.svg' },
+            { name: 'CSS3', icon: 'skills_svg/CSS.svg' }
+        ],
+        'Database': [
+            { name: 'MySQL', icon: 'skills_svg/MySQL-Dark.svg' },
+            { name: 'PostgreSQL', icon: 'skills_svg/postgresql-dark.svg' },
+            { name: 'Redis', icon: 'skills_svg/redis-dark.svg' },
+            { name: 'MongoDB', icon: 'skills_svg/mongodb.svg' },
+            { name: 'SQLite', icon: 'skills_svg/SQLite.svg' },
+        ],
+        'Tools & Others': [
+            { name: 'Git', icon: 'skills_svg/Git.svg' },
+            { name: 'GitLab', icon: 'skills_svg/GitLab-Dark.svg' },
+            { name: 'GitHub', icon: 'skills_svg/Github-Dark.svg' },
+            { name: 'AWS', icon: 'skills_svg/aws-dark.svg' },
+            { name: 'Docker', icon: 'skills_svg/docker.svg' },
+            { name: 'Postman', icon: 'skills_svg/Postman.svg' },
+            { name: 'Filebase', icon: 'skills_svg/Firebase-Dark.svg' },
+            { name: 'Kafka', icon: 'skills_svg/kafka.svg' }
+        ]
     };
 
     return (
-        <section id="skills" className='px-6 py-9'>
-            {/* Title */}
-            <Header header="Skills" />
-
-            {/* Skills Container */}
-            <div className='flex flex-col gap-8 max-w-4xl mx-auto'>
-
-                {/* Backend Skills Box */}
-                <div className='bg-gray-100 rounded-lg p-6 shadow-md'>
-                    <div className='text-center'>
-                        <div className="text-2xl relative inline-block text-center mb-12">
-                            Back-End
-                            <span className="absolute top-full left-0 h-0.5 bg-gradient-to-r from-gray-700 to-transparent rounded-lg w-full"></span>
+        <section id="skills" className="py-20 px-6">
+            <div className="container mx-auto max-w-6xl">
+                <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Skills & Technologies
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+                    {Object.entries(skillCategories).map(([category, skills]) => (
+                        <div key={category} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                            <h3 className="text-2xl font-bold mb-6 text-purple-400">{category}</h3>
+                            <div className="grid grid-cols-2 gap-4">
+                                {skills.map((skill, index) => (
+                                    <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all hover:transform hover:scale-105">
+                                        <img
+                                            src={skill.icon}
+                                            alt={`${skill.name} icon`}
+                                            className=' h-6 w-6 mr-3'
+                                        />
+                                        <span className="text-sm font-medium">{skill.name}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                    <div className='flex flex-wrap gap-8 justify-center'>
-                        {renderSkills(backend_skills)}
-                    </div>
-                </div>
-
-                {/* Frontend Skills Box */}
-                <div className='bg-gray-100 rounded-lg p-8 shadow-md'>
-                    <div className='text-center'>
-                        <div className="text-2xl relative inline-block text-center mb-12">
-                            Front-End
-                            <span className="absolute top-full left-0 h-0.5 bg-gradient-to-r from-gray-700 to-transparent rounded-lg w-full"></span>
-                        </div>
-                    </div>
-                    <div className='flex flex-wrap gap-6 justify-center'>
-                        {renderSkills(front_end)}
-                    </div>
-                </div>
-
-                {/* Other Technologies Box */}
-                <div className='bg-gray-100 rounded-lg p-6 shadow-md'>
-                    <div className='text-center'>
-                        <div className="text-2xl relative inline-block text-center mb-12">
-                            Other Technologies
-                            <span className="absolute top-full left-0 h-0.5 bg-gradient-to-r from-gray-700 to-transparent rounded-lg w-full"></span>
-                        </div>
-                    </div>
-                    <div className='flex flex-wrap gap-8 justify-center'>
-                        {renderSkills(other_skills)}
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
