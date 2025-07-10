@@ -5,13 +5,13 @@ const Contact = () => {
     const [isMessageSent, setIsMessageSent] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
-    const onSubmit = async (event: any) => {
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         const api_key = import.meta.env.VITE_EMAIL_API_KEY;
         event.preventDefault();
         setIsLoading(true);
         setIsMessageSent(false);
 
-        const formData = new FormData(event.target);
+        const formData = new FormData(event.currentTarget);
         formData.append('access_key', api_key);
 
         const object = Object.fromEntries(formData);
@@ -35,6 +35,9 @@ const Contact = () => {
             console.error('Error:', error);
         } finally {
             setIsLoading(false);
+            setTimeout(() => {
+                setIsMessageSent(false);
+            }, 2000)
         }
     };
 
@@ -61,7 +64,7 @@ const Contact = () => {
                             </div>
                             <div className="flex items-center">
                                 <Phone className="w-5 h-5 text-purple-400 mr-3" />
-                                <span>+91 8415054874</span>
+                                <span>+91-84150-54874</span>
                             </div>
                             <div className="flex items-center">
                                 <MapPin className="w-5 h-5 text-purple-400 mr-3" />
@@ -80,12 +83,19 @@ const Contact = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                    <form onSubmit={onSubmit} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                        {isMessageSent && (
+                            <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
+                                <p className="text-green-400 text-center">Message sent successfully!</p>
+                            </div>
+                        )}
                         <div className="space-y-6">
                             <div>
                                 <label className="block text-sm font-medium mb-2">Name</label>
                                 <input
                                     type="text"
+                                    id='name'
+                                    name='name'
                                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-400 transition-colors"
                                     placeholder="Your Name"
                                     required
@@ -95,6 +105,8 @@ const Contact = () => {
                                 <label className="block text-sm font-medium mb-2">Email</label>
                                 <input
                                     type="email"
+                                    id='email'
+                                    name='email'
                                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-400 transition-colors"
                                     placeholder="your@email.com"
                                     required
@@ -103,6 +115,8 @@ const Contact = () => {
                             <div>
                                 <label className="block text-sm font-medium mb-2">Message</label>
                                 <textarea
+                                    id='messang'
+                                    name='messang'
                                     rows={4}
                                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-400 transition-colors resize-none"
                                     placeholder="Your message..."
@@ -110,17 +124,19 @@ const Contact = () => {
                                 />
                             </div>
                             <button
-                                onClick={onSubmit}
-                                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                                type="submit"
+                                disabled = {isLoading}
+                                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                             >
-                                Send Message
+                                {(isLoading) ? "Sending..." : "Send Message" }
                             </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div className="text-center mt-16">
                     <a
-                        href="#"
+                        href="https://drive.google.com/file/d/1lXU7CbtFKv3l5n-9q1XaFDz-cdHftx0t/view"
+                        target='_blank'
                         className="inline-flex items-center bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                     >
                         <Download className="w-5 h-5 mr-2" />

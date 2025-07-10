@@ -1,5 +1,10 @@
+import { TypeAnimation } from "react-type-animation";
+import { useScrollToSection } from "./Hook/useScrollToSection"
 
 const Header = () => {
+
+    const { scrollToSection } = useScrollToSection();
+
     return (
         <section id="header" className="min-h-screen flex items-center justify-center px-6 pt-20">
             <div className="text-center max-w-4xl mx-auto">
@@ -11,7 +16,21 @@ const Header = () => {
                         Mansoor Elahi
                     </h1>
                     <h2 className="text-2xl md:text-3xl text-gray-300 mb-8">
-                        Full Stack Developer & UI/UX Designer
+                        <TypeAnimation
+                            sequence={[
+                                "Spring Boot Developer",
+                                1000,
+                                "Full Stack Developer",
+                                1000,
+                                "Back-End Developer",
+                                1000,
+                                "Front-End Developer",
+                                1000,
+                            ]}
+                            speed={50}
+                            repeat={Infinity}
+                            cursor={true}
+                        />
                     </h2>
                     <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
                         Full-stack developer skilled in Spring Boot, Java, Node.js, React, and TypeScript. Built scalable backends and responsive UIs for production apps using MySQL, MongoDB, Redis, Docker, and AWS. Solved 400+ LeetCode problems and DSA certified, bringing strong problem-solving skills. Created side projects like a URL shortener and Firebase-based movie app.
@@ -19,13 +38,13 @@ const Header = () => {
                 </div>
                 <div className="flex justify-center space-x-6">
                     <button
-                        //   onClick={() => scrollToSection('projects')}
+                        onClick={() => scrollToSection('projects')}
                         className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                     >
                         View My Work
                     </button>
                     <button
-                        //   onClick={() => scrollToSection('contact')}
+                        onClick={() => scrollToSection('contact')}
                         className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all"
                     >
                         Get In Touch
