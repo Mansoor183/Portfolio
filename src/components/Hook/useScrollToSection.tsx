@@ -1,4 +1,3 @@
-// hooks/useScrollToSection.ts
 import { useState, useEffect } from 'react';
 
 type SectionId = string;
@@ -9,8 +8,7 @@ interface UseScrollToSectionReturn {
 }
 
 export const useScrollToSection = (
-    sections: SectionId[] = ['header', 'skills', 'experience', 'projects', 'contact']
-): UseScrollToSectionReturn => {
+    sections: SectionId[] = ['header', 'skills', 'experience', 'projects', 'contact']): UseScrollToSectionReturn => {
     const [activeSection, setActiveSection] = useState('header');
 
     const scrollToSection = (sectionId: SectionId): void => {
@@ -38,7 +36,6 @@ export const useScrollToSection = (
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-        // Observe all sections
         sections.forEach((sectionId) => {
             const element = document.getElementById(sectionId);
             if (element) {

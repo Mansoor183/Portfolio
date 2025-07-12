@@ -36,16 +36,16 @@ const Header = () => {
                         Full-stack developer skilled in Spring Boot, Java, Node.js, React, and TypeScript. Built scalable backends and responsive UIs for production apps using MySQL, MongoDB, Redis, Docker, and AWS. Solved 400+ LeetCode problems and DSA certified, bringing strong problem-solving skills. Created side projects like a URL shortener and Firebase-based movie app.
                     </p>
                 </div>
-                <div className="flex justify-center space-x-6">
+                <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
                     <button
-                        onClick={() => scrollToSection('projects')}
-                        className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                        onClick={() => scrollToSection('experience')}
+                        className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 w-full sm:w-auto"
                     >
                         View My Work
                     </button>
                     <button
                         onClick={() => scrollToSection('contact')}
-                        className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all"
+                        className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all w-full sm:w-auto"
                     >
                         Get In Touch
                     </button>
