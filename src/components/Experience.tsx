@@ -11,7 +11,7 @@ const Experience = () => {
 
     const experiences : Experience[] = [
         {
-            title: 'Software Engineer',
+            title: 'Software Development Engineer - I',
             company: 'Nanoheal',
             period: 'Apr 2024 - Present',
             description: 'At Nanoheal, I worked on building scalable backend services and optimizing cross-platform desktop applications. I contributed to key modules like License & Activation, IGM for ONDC, and a complete desktop client revamp, while also improving API security and setting up CI/CD pipelines.',
@@ -25,7 +25,7 @@ const Experience = () => {
             ]
         },
         {
-            title: 'Software Engineer Intern',
+            title: 'Software Engineer',
             company: 'OpenText',
             period: 'Jun 2023 - Dec 2023',
             description: 'At OpenText, I worked on securing backend systems by fixing critical vulnerabilities in Spring Boot authentication. I enhanced encryption, optimized JWT handling, and deployed hotfixes to maintain system uptime and strengthen overall security.',
