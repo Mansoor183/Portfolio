@@ -9,11 +9,21 @@ const Experience = () => {
         responsibilities: string[]
     }
 
-    const experiences : Experience[] = [
+    const experiences: Experience[] = [
+        {
+            title: 'Software Developer',
+            company: 'Deloitte',
+            period: 'Dec 2025 - Present',
+            description: 'Working on Data Flow Finder, an internal documentation platform used to generate workflow-based documents, step-by-step guides, and presentations. My work focuses on backend feature development and system optimization.',
+            responsibilities: [
+                'Built a “Share to Email” feature using SMTP to send generated documents directly from the web UI.',
+                'Implemented an OpenSearch-based backend workflow to fetch screenshots in the web UI without direct desktop app communication.'
+            ]
+        },
         {
             title: 'Software Development Engineer - I',
             company: 'Nanoheal',
-            period: 'Apr 2024 - Present',
+            period: 'Apr 2024 - Dec 2025',
             description: 'At Nanoheal, I worked on building scalable backend services and optimizing cross-platform desktop applications. I contributed to key modules like License & Activation, IGM for ONDC, and a complete desktop client revamp, while also improving API security and setting up CI/CD pipelines.',
             responsibilities: [
                 'Built License & Activation module with Spring Boot and MySQL on AWS EC2, serving 50K+ license requests/month.',
