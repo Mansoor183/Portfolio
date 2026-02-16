@@ -16,8 +16,10 @@ const Experience = () => {
             period: 'Dec 2025 - Present',
             description: 'Working on Data Flow Finder, an internal documentation platform used to generate workflow-based documents, step-by-step guides, and presentations. My work focuses on backend feature development and system optimization.',
             responsibilities: [
-                'Built a “Share to Email” feature using SMTP to send generated documents directly from the web UI.',
-                'Implemented an OpenSearch-based backend workflow to fetch screenshots in the web UI without direct desktop app communication.'
+                'Implemented secure session timeout (10-min inactivity) with token validation, improving authentication security by ~40%.',
+                'Designed account lockout mechanism (5 failed attempts) reducing brute-force login attempts by ~50%.',      
+                'Built concurrent session control (1–2 active logins/user) to prevent account misuse and enforce access governance.',
+                'Configured AWS API Gateway rate limiting to handle 5,000+ req/min and protect backend services from abuse.'
             ]
         },
         {
