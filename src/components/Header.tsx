@@ -33,7 +33,7 @@ const Header = () => {
                         />
                     </h2>
                     <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                        Full-stack developer skilled in Spring Boot, Java, Node.js, React, and TypeScript. Built scalable backends and responsive UIs for production apps using MySQL, MongoDB, Redis, Docker, and AWS. Solved 400+ LeetCode problems and DSA certified, bringing strong problem-solving skills. Created side projects like a URL shortener and Firebase-based movie app.
+                        Full-stack developer skilled in Spring Boot, Java, Node.js, React, and TypeScript. Built scalable backends and responsive UIs for production apps using MySQL, MongoDB, Redis, Docker, and AWS. Solved 500+ LeetCode problems and DSA certified, bringing strong problem-solving skills. Created side projects like a URL shortener and Firebase-based movie app.
                     </p>
                 </div>
                 <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">

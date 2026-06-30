@@ -14,37 +14,32 @@ const Experience = () => {
             title: 'Software Developer',
             company: 'Deloitte',
             period: 'Dec 2025 - Present',
-            description: 'Working on Data Flow Finder, an internal documentation platform used to generate workflow-based documents, step-by-step guides, and presentations. My work focuses on backend feature development and system optimization.',
+            description: 'At Deloitte, I work on a multi-tenant SaaS platform serving 1,000-2,000 users, focusing on security hardening and building async data pipelines on AWS. My work spans VAPT remediation, event-driven backend architecture, and release management tooling,',
             responsibilities: [
-                'Implemented secure session timeout (10-min inactivity) with token validation, improving authentication security by ~40%.',
-                'Designed account lockout mechanism (5 failed attempts) reducing brute-force login attempts by ~50%.',      
-                'Built concurrent session control (1–2 active logins/user) to prevent account misuse and enforce access governance.',
-                'Configured AWS API Gateway rate limiting to handle 5,000+ req/min and protect backend services from abuse.'
+                'Resolved 10 VAPT audit findings on a 1,000–2,000 user multi-tenant SaaS platform, implementing rate limiting, security headers, hardened password policy, idle session timeout, and single-session enforcement to eliminate concurrent session vulnerabilities.',
+                'Engineered an async Video-to-SOP pipeline on AWS, where ECS extracts frames from short-form videos and publishes to SQS, Lambda consumes each frame and invokes an LLM for step descriptions, and structured docs are persisted to a NoSQL store with sequence integrity.',
+                'Shipped a desktop app versioning system with version tracked in DB and surfaced in the webapp, where CI/CD auto-extracts version on merge, syncs to S3 and Secrets Manager, and triggers an in-app installer prompt on mismatch.',
             ]
         },
         {
             title: 'Software Development Engineer - I',
             company: 'Nanoheal',
             period: 'Apr 2024 - Dec 2025',
-            description: 'At Nanoheal, I worked on building scalable backend services and optimizing cross-platform desktop applications. I contributed to key modules like License & Activation, IGM for ONDC, and a complete desktop client revamp, while also improving API security and setting up CI/CD pipelines.',
+            description: 'At Nanoheal, I worked on building scalable backend services and optimizing cross-platform desktop applications. I contributed to key modules like License & Activation and IGM for ONDC, and led a complete desktop client revamp serving 40K+ devices.',
             responsibilities: [
-                'Built License & Activation module with Spring Boot and MySQL on AWS EC2, serving 50K+ license requests/month.',
-                'Rebuilt desktop client for 40K+ devices using Electron-React and Fluent UI, reducing UI load time by 80% and improving backend interaction by 30%.',
-                'Fixed data duplication bug by refactoring backend logic and DB schema, eliminating 20x redundant writes.',
-                'Implemented public key pinning with automated rotation to secure communications and prevent MITM attacks.',
-                'Developed IGM module for ONDC’s B2B platform using Node.js, TypeScript, and MongoDB with Redis caching, improving API response time by 40%.',
-                'Set up CI/CD pipelines using GitHub Actions for automated build, test, and deployment workflows.',
+                'Built License & Activation module using Spring Boot and MySQL on AWS EC2, designing REST APIs for license validation, activation state tracking, and expiry enforcement, handling 50K+ requests/month.',
+                'Rebuilt desktop client for 40K+ devices by migrating to Electron-React with Fluent UI, decoupling UI rendering from backend calls using async handlers, cutting load time by 80% and improving backend interaction by 30%.',
+                'Developed IGM module for ONDC’s B2B platform using Node.js, TypeScript, and MongoDB, integrating Redis caching for frequently accessed grievance records, improving API response time by 40%.',
             ]
         },
         {
-            title: 'Software Engineer',
+            title: 'Software Engineer Intern',
             company: 'OpenText',
-            period: 'Jun 2023 - Dec 2023',
-            description: 'At OpenText, I worked on securing backend systems by fixing critical vulnerabilities in Spring Boot authentication. I enhanced encryption, optimized JWT handling, and deployed hotfixes to maintain system uptime and strengthen overall security.',
+            period: 'Jun 2022 - Dec 2022',
+            description: 'At OpenText, I worked on strengthening authentication and authorization in a Spring Boot application, tracing and fixing a critical access control bypass, and improving test coverage for security-critical login flows.',
             responsibilities: [
-                'Fixed a critical password encryption vulnerability in Spring Boot, securing 10,000+ user accounts with enhanced validation.',
-                'Optimized token expiration handling in JWT tokens, reducing unauthorized access attempts by 95%.',
-                'Deployed several critical hotfixes for back-end modules, ensuring 99.9% system uptime and improving security.'
+                'Fixed a critical authentication bypass in a Spring Boot app where failed admin logins were incorrectly granted access, tracing root cause to a missing credential validation check and enforcing strict password verification before role assignment.',
+                'Wrote and manually validated unit test cases for authentication and authorization flows, improving coverage of edge cases including invalid credentials, role boundary checks, and session expiry scenarios.',
             ]
         }
     ];

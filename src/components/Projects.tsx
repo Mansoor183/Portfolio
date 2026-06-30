@@ -15,7 +15,7 @@ const Projects = () => {
         {
             title: 'URL Shortener',
             image: 'project_images/url_shortener.webp',
-            description: 'Engineered a high-capacity URL shortening service with 3.5T+ URL capacity, implementing Redis LRU caching for 90% query reduction, custom alias functionality, and containerized deployment architecture.',
+            description: 'A scalable URL shortener built with Spring Boot, generating collision-safe Base62 hashes and securing access with JWT-based authentication via Spring Security. Redis caching cuts database queries by 90%, with per-user ownership enforcement and Docker containerization, all backed by an automated CI pipeline.',
             technologies: ['Spring Boot', 'Hibernate', 'Redis', 'Docker', 'Java', 'MySQL', 'Git'],
             liveUrl: '',
             githubUrl: 'https://github.com/Mansoor183/URL-Shortener'
