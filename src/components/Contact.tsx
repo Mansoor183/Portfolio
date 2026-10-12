@@ -135,12 +135,12 @@ const Contact = () => {
                 </div>
                 <div className="text-center mt-16">
                     <a
-                        href="https://drive.google.com/file/d/1bu_PkgyVtVEdKZtsY01XrsXzH8XMvS07/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1nTow4Oii1ZQbvt_k0Vg2iBJUrM-FStJV/view?usp=sharing"
                         target='_blank'
                         className="inline-flex items-center bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                     >
                         <Download className="w-5 h-5 mr-2" />
-                        Download Resume
+                        View Resume
                     </a>
                 </div>
             </div>

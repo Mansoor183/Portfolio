@@ -14,32 +14,38 @@ const Experience = () => {
             title: 'Software Developer',
             company: 'Deloitte',
             period: 'Dec 2025 - Present',
-            description: 'At Deloitte, I work on a multi-tenant SaaS platform serving 1,000-2,000 users, focusing on security hardening and building async data pipelines on AWS. My work spans VAPT remediation, event-driven backend architecture, and release management tooling,',
+            description: 'At Deloitte, I work on a SaaS platform, focusing on backend security hardening, AWS-based event-driven processing, and desktop application release management. My work spans VAPT remediation, authentication and session management, LLM-powered video-to-SOP pipelines, and application versioning and update workflows.',
             responsibilities: [
-                'Resolved 10 VAPT audit findings on a 1,000–2,000 user multi-tenant SaaS platform, implementing rate limiting, security headers, hardened password policy, idle session timeout, and single-session enforcement to eliminate concurrent session vulnerabilities.',
-                'Engineered an async Video-to-SOP pipeline on AWS, where ECS extracts frames from short-form videos and publishes to SQS, Lambda consumes each frame and invokes an LLM for step descriptions, and structured docs are persisted to a NoSQL store with sequence integrity.',
-                'Shipped a desktop app versioning system with version tracked in DB and surfaced in the webapp, where CI/CD auto-extracts version on merge, syncs to S3 and Secrets Manager, and triggers an in-app installer prompt on mismatch.',
+                'Remediated 10 VAPT findings in the Spring Boot backend by implementing per-user rate limiting, regex-based password validation, security headers, and CORS handling.',
+                'Reconfigured Amazon Cognito JWT claims and token expiration; implemented configurable concurrent-session limits using custom middleware and AWS Secrets Manager.',
+                'Developed and optimized an AWS Lambda consumer for SQS frame messages, generating LLM-based SOP steps and reducing per-message processing time from 15s to 5s under ideal conditions.',
+                'Configured AWS infrastructure for the video-to-SOP pipeline, including ECS task definitions and ECR repositories; built video upload and SOP-viewing UI with S3 multipart uploads.',
+                'Developed desktop application version-management APIs and UI, integrating AWS Secrets Manager for version configuration and S3 for installer storage and downloads.',
+                'Implemented desktop update prompts and web-based downgrade warnings to handle application version changes.',
             ]
         },
         {
-            title: 'Software Development Engineer - I',
+            title: 'Software Development Engineer I',
             company: 'Nanoheal',
             period: 'Apr 2024 - Dec 2025',
-            description: 'At Nanoheal, I worked on building scalable backend services and optimizing cross-platform desktop applications. I contributed to key modules like License & Activation and IGM for ONDC, and led a complete desktop client revamp serving 40K+ devices.',
+            description: 'Built and secured backend services and desktop client workflows for a large-scale device management platform, while improving performance, reliability, and deployment automation.',
             responsibilities: [
-                'Built License & Activation module using Spring Boot and MySQL on AWS EC2, designing REST APIs for license validation, activation state tracking, and expiry enforcement, handling 50K+ requests/month.',
-                'Rebuilt desktop client for 40K+ devices by migrating to Electron-React with Fluent UI, decoupling UI rendering from backend calls using async handlers, cutting load time by 80% and improving backend interaction by 30%.',
-                'Developed IGM module for ONDC’s B2B platform using Node.js, TypeScript, and MongoDB, integrating Redis caching for frequently accessed grievance records, improving API response time by 40%.',
+                'Built the License & Activation module using Spring Boot, MySQL, and AWS EC2, designing REST APIs for license validation, activation state, and expiry enforcement, serving 50K+ requests/month.',
+                'Eliminated 20x redundant writes by refactoring backend logic and DB schema to fix a data duplication bug.',
+                'Secured client-server traffic against MITM attacks with public key pinning and automated key rotation.',
+                'Improved API response time by 40% in ONDC’s B2B IGM module using Node.js, TypeScript, MongoDB, and Redis caching for grievance records.',
+                'Cut desktop client load time by 80% and improved backend interaction by 30% for 40K+ devices by rebuilding it in Electron-React with Fluent UI and async handlers.',
+                'Automated build, test, and deployment workflows with GitHub Actions CI/CD pipelines.',
             ]
         },
         {
             title: 'Software Engineer Intern',
             company: 'OpenText',
             period: 'Jun 2022 - Dec 2022',
-            description: 'At OpenText, I worked on strengthening authentication and authorization in a Spring Boot application, tracing and fixing a critical access control bypass, and improving test coverage for security-critical login flows.',
+            description: 'Worked on strengthening authentication and authorization in a Spring Boot application, fixing a critical access-control issue and improving security-focused test coverage.',
             responsibilities: [
-                'Fixed a critical authentication bypass in a Spring Boot app where failed admin logins were incorrectly granted access, tracing root cause to a missing credential validation check and enforcing strict password verification before role assignment.',
-                'Wrote and manually validated unit test cases for authentication and authorization flows, improving coverage of edge cases including invalid credentials, role boundary checks, and session expiry scenarios.',
+                'Fixed a critical authentication bypass in a Spring Boot app where failed admin logins were incorrectly granted access by enforcing credential validation before role assignment.',
+                'Wrote unit tests for authentication and authorization flows covering invalid credentials, role boundaries, and session expiry scenarios.',
             ]
         }
     ];
